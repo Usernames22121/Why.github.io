@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; margin: 0; padding: 0; color: #fff;
+      background: url("background1.jpg") no-repeat center center fixed;
+      background-size: cover; transition: background 1s ease-in-out;
+      animation: changeBackground 30s infinite;
+    }
+    header { background: rgba(0, 0, 50, 0.7); padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2em; }
+    nav { margin-top: 10px; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #00cfff; }
+    main { padding: 40px; background: rgba(0, 0, 0, 0.6); margin: 20px; border-radius: 12px; }
+    footer { text-align: center; padding: 15px; background: rgba(0, 0, 50, 0.7); }
+    @keyframes changeBackground {
+      0%   { background-image: url("background1.jpg"); }
+      33%  { background-image: url("background2.jpg"); }
+      66%  { background-image: url("background3.jpg"); }
+      100% { background-image: url("background1.jpg"); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Services</h1>
+    <nav>
+      <a href="Home.HTML">Home</a>
+      <a href="Gases.HTML">Safe Gas Use</a>
+      <a href="Services.HTML">Our Services</a>
+    </nav>
+  </header>
 
+  <main>
+    <h2>What We Offer</h2>
+    <p>We provide professional climate control and refrigeration solutions including:</p>
+    <ul>
+      <li>Residential and commercial air-conditioning installation</li>
+      <li>Refrigeration system maintenance & repair</li>
+      <li>Energy-efficient cooling upgrades</li>
+      <li>Emergency breakdown service</li>
+      <li>Custom climate solutions for industries</li>
+    </ul>
+    <h2>Our Goals</h2>
+    <p>
+      To deliver <strong>efficient, sustainable, and affordable climate control systems</strong> 
+      that meet our clients’ needs while protecting the environment.
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Climate Control & Refrigeration. All rights reserved.</p>
+  </footer>
+</body>
+</html>
