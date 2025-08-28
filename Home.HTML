@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AM Refrigeration</title>
+  <title>Climate Control & Refrigeration</title>
   <style>
-    /* General look */
     body {
       margin: 0; padding: 0;
       font-family: Arial, sans-serif;
@@ -15,12 +14,31 @@
     }
     header {
       background: rgba(0, 0, 50, 0.7);
-      padding: 20px; text-align: center;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    header h1 { margin: 0; font-size: 2em; }
-    nav { margin-top: 10px; }
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 50px; /* adjust logo size */
+      width: auto;
+      margin-right: 10px;
+    }
+    header h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 2em;
+      margin: 0;
+    }
+    nav {
+      margin-left: auto;
+    }
     nav a {
-      color: #fff; margin: 0 15px;
+      color: #fff; margin: 0 10px;
       text-decoration: none; font-weight: bold;
     }
     nav a:hover { color: #00eaff; }
@@ -49,7 +67,10 @@
 </head>
 <body>
   <header>
-    <h1>AM Refrigeration</h1>
+    <div class="logo">
+      <img src="file:///C:/Users/Elijah/Downloads/ClimateControlAir+Logo-179w.webp" alt="Company Logo">
+    </div>
+    <h1>Climate Control & Refrigeration</h1>
     <nav>
       <a href="Home.HTML">Home</a>
       <a href="Gases.HTML">Safe Gas Use</a>
@@ -61,14 +82,9 @@
   <main>
     <h2>Welcome to Our Company</h2>
     <p>
-    Air Conditioning & Refrigeration in Cooloola
-    Residential & Commercial Cooling Experts Keep your home or business climate-controlled all year round with Climate Control Refrigeration & Air Conditioning. 
-    Our experienced technicians supply, install, repair and service a wide range of air conditioning and refrigeration systems for clients throughout Cooloola, Gympie and surrounding areas. 
-    We source high-quality A/C systems from leading brand Mitsubishi Electric and more to ensure you have an efficient and long-lasting unit—all at an affordable price. 
-    What’s more, our technicians provide ongoing support services once the job is done.
-    Tick all the boxes when it comes to your residential and commercial cooling needs. 
-    Contact Climate Control Refrigeration & Air Conditioning today for a free quote. 
-    Our service areas include Gympie, Cooloola Cove, Tin Can Bay, Rainbow Beach and surrounding areas. 
+      We specialize in <strong>air-conditioning, refrigeration, and climate control solutions</strong> 
+      for homes and businesses. Our mission is to provide efficient, reliable, and environmentally
+      friendly cooling systems.
     </p>
     <p>
       Explore our website to learn about our services and how we ensure 
