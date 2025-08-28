@@ -1,187 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #1e3c72, #2a5298);
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header */
-header {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px auto;
-  width: 80%;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-/* Links */
-.link-container {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  background: #ffffffcc;
-  color: #1e3c72;
-  padding: 12px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: white;
-  color: #000;
-}
-
-/* Footer */
-footer {
-  margin-top: auto;
-  padding: 15px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  font-size: 0.9rem;
-}
-
-/* Snowflakes animation */
-.snowflakes {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.snowflake {
-  position: absolute;
-  top: -10px;
-  color: white;
-  font-size: 1.5em;
-  animation-name: fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.snowflake:nth-child(1) {
-  left: 10%;
-  animation-duration: 10s;
-}
-.snowflake:nth-child(2) {
-  left: 20%;
-  animation-duration: 12s;
-  font-size: 2em;
-}
-.snowflake:nth-child(3) {
-  left: 40%;
-  animation-duration: 8s;
-}
-.snowflake:nth-child(4) {
-  left: 60%;
-  animation-duration: 14s;
-  font-size: 1.2em;
-}
-.snowflake:nth-child(5) {
-  left: 80%;
-  animation-duration: 11s;
-  font-size: 1.8em;
-}
-.snowflake:nth-child(6) {
-  left: 90%;
-  animation-duration: 9s;
-}
-
-@keyframes fall {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100vh); }
-}
-📄 Example Extra Page (About Page: about.html)
-html
-Copy code
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Climate Control & Refrigeration</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: url("background1.jpg") no-repeat center center fixed;
+      background-size: cover;
+      transition: background 1s ease-in-out;
+      animation: changeBackground 30s infinite;
+    }
+    header {
+      background: rgba(0, 0, 50, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2em; }
+    nav { margin-top: 10px; }
+    nav a {
+      color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold;
+    }
+    nav a:hover { color: #00cfff; }
+    main {
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px;
+      border-radius: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 50, 0.7);
+    }
+    @keyframes changeBackground {
+      0%   { background-image: url("background1.jpg"); }
+      33%  { background-image: url("background2.jpg"); }
+      66%  { background-image: url("background3.jpg"); }
+      100% { background-image: url("background1.jpg"); }
+    }
+  </style>
 </head>
 <body>
-  <!-- Reuse snowflakes for all pages -->
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-  </div>
-
   <header>
-    <h1>About Us</h1>
+    <h1>Climate Control & Refrigeration</h1>
+    <nav>
+      <a href="Home.HTML">Home</a>
+      <a href="Gases.HTML">Safe Gas Use</a>
+      <a href="Services.HTML">Our Services</a>
+    </nav>
   </header>
 
   <main>
-    <p>This is the About Us page. Write details about your site here.</p>
-    <a href="index.html" class="btn">Back to Homepage</a>
-  </main>
-</body>
-</html>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snowflake Homepage</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Snowflakes -->
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-  </div>
-
-  <!-- Page Content -->
-  <header>
-    <h1>Welcome to My Snowy Homepage</h1>
-  </header>
-
-  <main>
-    <div class="link-container">
-      <a href="about.html" class="btn">About Us</a>
-      <a href="services.html" class="btn">Services</a>
-      <a href="contact.html" class="btn">Contact</a>
-    </div>
+    <h2>Welcome to Our Company</h2>
+    <p>
+      We specialize in <strong>air-conditioning, refrigeration, and climate control solutions</strong> 
+      for homes and businesses. Our mission is to provide efficient, reliable, and environmentally
+      friendly cooling systems.
+    </p>
+    <p>
+      Explore our website to learn about our services and how we ensure 
+      <strong>safe use of refrigerant gases</strong>.
+    </p>
   </main>
 
   <footer>
-    <p>© 2025 My Snowflake Website. All rights reserved.</p>
+    <p>&copy; 2025 Climate Control & Refrigeration. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
-
