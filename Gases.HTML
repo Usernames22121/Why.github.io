@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Safe Use of Refrigerant Gases</title>
   <style>
-    body { margin:0; padding:0; font-family:Arial; color:#fff;
+    body{margin:0;padding:0;font-family:Arial;color:#fff;
       background:linear-gradient(to bottom,#0d47a1,#1976d2,#42a5f5);
-      overflow-x:hidden; }
-    header { background:rgba(0,0,50,0.7); padding:20px; text-align:center; }
-    header h1{margin:0;} nav{margin-top:10px;}
-    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold;}
+      overflow-x:hidden;}
+    header{background:rgba(0,0,50,0.7);padding:10px 20px;
+      display:flex;align-items:center;justify-content:space-between;}
+    .logo img{height:50px;width:auto;}
+    header h1{flex:1;text-align:center;margin:0;font-size:2em;}
+    nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;}
     nav a:hover{color:#00eaff;}
     main{padding:40px;margin:20px;background:rgba(0,0,0,0.5);border-radius:12px;}
     footer{text-align:center;padding:15px;background:rgba(0,0,50,0.7);}
@@ -20,12 +22,13 @@
 </head>
 <body>
   <header>
+    <div class="logo"><img src="https://github.com/Usernames22121/Why.github.io/blob/main/ClimateCon.png" alt="Company Logo"></div>
     <h1>Safe Use of Refrigerant Gases</h1>
     <nav>
-      <a href="Home.HTML">Home</a>
-      <a href="Gases.HTML">Safe Gas Use</a>
-      <a href="Services.HTML">Our Services</a>
-      <a href="Contacts.HTML">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="gases.html">Safe Gas Use</a>
+      <a href="services.html">Our Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -35,27 +38,21 @@
       <li>Only licensed professionals should handle refrigerants.</li>
       <li>Always wear protective equipment (gloves, goggles, mask).</li>
       <li>Ensure proper ventilation when working indoors.</li>
-      <li>Recover and recycle gases according to environmental regulations.</li>
+      <li>Recover and recycle gases according to regulations.</li>
       <li>Never release refrigerant gases into the atmosphere.</li>
     </ul>
-    <p>
-      By following these guidelines, we help protect both <strong>people and the environment</strong>.
-    </p>
+    <p>By following these guidelines, we help protect both 
+    <strong>people and the environment</strong>.</p>
   </main>
 
   <footer><p>&copy; 2025 Climate Control & Refrigeration.</p></footer>
 
   <script>
-    function createSnowflakes() {
-      for (let i = 0; i < 20; i++) {
-        let s=document.createElement("div");
-        s.className="snowflake"; s.innerHTML="❄";
-        s.style.left=Math.random()*100+"vw";
-        s.style.fontSize=Math.random()*20+10+"px";
-        s.style.animationDuration=(Math.random()*5+5)+"s";
-        document.body.appendChild(s);
-      }
-    } createSnowflakes();
+    function createSnowflakes(){for(let i=0;i<20;i++){
+      let s=document.createElement("div");s.className="snowflake";s.innerHTML="❄";
+      s.style.left=Math.random()*100+"vw";s.style.fontSize=Math.random()*20+10+"px";
+      s.style.animationDuration=(Math.random()*5+5)+"s";document.body.appendChild(s);
+    }} createSnowflakes();
   </script>
 </body>
 </html>
