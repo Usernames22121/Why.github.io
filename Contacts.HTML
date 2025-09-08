@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Climate Control & Refrigeration</title>
   <style>
+
+// 🌟 Contact form validation + fun feedback
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let valid = true;
+    form.querySelectorAll("input, textarea").forEach(field => {
+      if (!field.value.trim()) {
+        valid = false;
+        field.style.border = "2px solid red";
+        field.animate([{transform:"translateX(-5px)"},{transform:"translateX(5px)"},{transform:"translateX(0)"}], 
+                      {duration:200, iterations:2});
+      } else {
+        field.style.border = "2px solid limegreen";
+      }
+    });
+
+    if (valid) {
+      alert("✅ Thanks for your message!");
+      form.reset();
+    }
+  });
+}
+
     body {
       margin: 0; padding: 0;
       font-family: Arial, sans-serif; color: #fff;
