@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services</title>
   <style>
+
+// 🌟 Slide-in effect for services
+const services = document.querySelectorAll("main ul li");
+if (services.length) {
+  services.forEach((service, i) => {
+    service.style.opacity = 0;
+    service.style.transform = "translateX(-30px)";
+    setTimeout(() => {
+      service.style.transition = "all 0.8s ease";
+      service.style.opacity = 1;
+      service.style.transform = "translateX(0)";
+    }, i * 500);
+  });
+}
+
     body{margin:0;padding:0;font-family:Arial;color:#fff;
       background:linear-gradient(to bottom,#0d47a1,#1976d2,#42a5f5);
       overflow-x:hidden;}
