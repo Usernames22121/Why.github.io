@@ -2,35 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Climate Control & Refrigeration</title>
+  <style>
+    body {margin:0;padding:0;font-family:Arial,sans-serif;color:#fff;
+      background:linear-gradient(to bottom,#0d47a1,#1976d2,#42a5f5);overflow-x:hidden;}
+    header {background:rgba(0,0,50,0.7);padding:10px 20px;
+      display:flex;align-items:center;justify-content:space-between;}
+    .logo img {height:50px;width:auto;}
+    header h1 {flex:1;text-align:center;font-size:2em;margin:0;}
+    nav a {color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;transition:all 0.3s;}
+    nav a:hover {color:#00eaff;transform:scale(1.1);text-shadow:0 0 8px #00eaff;}
+    main {padding:40px;margin:20px;background:rgba(0,0,0,0.5);border-radius:12px;
+      opacity:0;transform:translateY(20px);transition:opacity 1s ease,transform 1s ease;}
+    main.show {opacity:1;transform:translateY(0);}
+    footer {text-align:center;padding:15px;background:rgba(0,0,50,0.7);}
+    .snowflake {position:fixed;top:-10px;color:white;font-size:1em;
+      animation:fall linear infinite;pointer-events:none;}
+    @keyframes fall {to {transform:translateY(100vh);}}
+    .welcome {font-size:1.2em;margin-top:10px;font-style:italic;}
+  </style>
 </head>
 <body>
+  <header>
+    <div class="logo"><img src="logo.png" alt="Company Logo"></div>
+    <h1>Climate Control & Refrigeration</h1>
+    <nav>
+      <a href="Home.HTML">Home</a>
+      <a href="Gases.HTML">Safe Gas Use</a>
+      <a href="Services.HTML">Our Services</a>
+      <a href="Contacts.HTML">Contact</a>
+    </nav>
+  </header>
 
-  <h1>Climate Control & Refrigeration</h1>
+  <main id="content">
+    <h2>Welcome to Our Company</h2>
+    <p class="welcome" id="welcome-message"></p>
+    <p>We specialize in <strong>air-conditioning, refrigeration, and climate control solutions</strong> 
+    for homes and businesses. Our mission is to provide efficient, reliable, and environmentally
+    friendly cooling systems.</p>
+    <p>Explore our website to learn about our services and how we ensure 
+    <strong>safe use of refrigerant gases</strong>.</p>
+  </main>
 
-  <!-- Navigation -->
-  <p>
-    <a href="Home.html">Home</a> |
-    <a href="Gases.HTML">Safe Gas Use</a> |
-    <a href="Services.HTML">Our Services</a> |
-    <a href="Contacts.HTML">Contact</a>
-  </p>
+  <footer><p>&copy; 2025 Climate Control & Refrigeration.</p></footer>
 
-  <!-- Main Content -->
-  <h2>Welcome to Our Company</h2>
+  <script>
+    // Snowflakes
+    function createSnowflakes(){for(let i=0;i<25;i++){
+      let s=document.createElement("div");s.className="snowflake";s.innerHTML="❄";
+      s.style.left=Math.random()*100+"vw";s.style.fontSize=Math.random()*20+10+"px";
+      s.style.animationDuration=(Math.random()*5+5)+"s";document.body.appendChild(s);}}
+    createSnowflakes();
 
-  <p><em>Welcome! We're here to keep you cool and comfortable.</em></p>
+    // Welcome Message
+    const hour=new Date().getHours();const welcome=document.getElementById("welcome-message");
+    if(welcome){if(hour<12)welcome.textContent="Good morning! Stay cool with our aircon solutions.";
+    else if(hour<18)welcome.textContent="Good afternoon! We keep businesses running smoothly.";
+    else welcome.textContent="Good evening! Reliable climate comfort anytime.";}
 
-  <p>We specialize in <strong>air-conditioning, refrigeration, and climate control solutions</strong> 
-  for homes and businesses.</p>
+    // Fade-in content
+    window.addEventListener("load",()=>{document.getElementById("content").classList.add("show");});
 
-  <p>Our mission is to provide efficient, reliable, and environmentally friendly cooling systems.</p>
+    // Random gradient
+    const gradients=[["#0d47a1","#1976d2","#42a5f5"],["#002f4b","#005c97","#00c6ff"],
+    ["#1a237e","#303f9f","#3f51b5"],["#00416a","#0072ff","#00c6ff"]];
+    let pick=gradients[Math.floor(Math.random()*gradients.length)];
+    document.body.style.background=`linear-gradient(to bottom,${pick[0]},${pick[1]},${pick[2]})`;
+  </script>
+</body>
+</html>
+🧯 gases.html (Safe Gas Use)
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Use of Refrigerant Gases</title>
+  <style>
+    body{margin:0;padding:0;font-family:Arial;color:#fff;background:linear-gradient(to bottom,#0d47a1,#1976d2,#42a5f5);overflow-x:hidden;}
+    header{background:rgba(0,0,50,0.7);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;}
+    .logo img{height:50px;width:auto;}
+    header h1{flex:1;text-align:center;margin:0;font-size:2em;}
+    nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;transition:all 0.3s;}
+    nav a:hover{color:#00eaff;transform:scale(1.1);text-shadow:0 0 8px #00eaff;}
+    main{padding:40px;margin:20px;background:rgba(0,0,0,0.5);border-radius:12px;}
+    footer{text-align:center;padding:15px;background:rgba(0,0,50,0.7);}
+    .snowflake{position:fixed;top:-10px;color:white;font-size:1em;animation:fall linear infinite;pointer-events:none;}
+    @keyframes fall{to{transform:translateY(100vh);}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="logo.png" alt="Company Logo"></div>
+    <h1>Safe Use of Refrigerant Gases</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gases.html">Safe Gas Use</a>
+      <a href="services.html">Our Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <p>Explore our website to learn more about what we offer and how we ensure the 
-  <strong>safe use of refrigerant gases</strong>.</p>
+  <main>
+    <h2>Working Safely with Refrigerants</h2>
+    <ul>
+      <li>Only licensed professionals should handle refrigerants.</li>
+      <li>Always wear protective equipment (gloves, goggles, mask).</li>
+      <li>Ensure proper ventilation when working indoors.</li>
+      <li>Recover and recycle gases according to regulations.</li>
+      <li>Never release refrigerant gases into the atmosphere.</li>
+    </ul>
+    <p>By following these guidelines, we help protect both 
+    <strong>people and the environment</strong>.</p>
+  </main>
 
-  <!-- Footer -->
-  <p>&copy; 2025 Climate Control & Refrigeration</p>
+  <footer><p>&copy; 2025 Climate Control & Refrigeration.</p></footer>
 
+  <script>
+    // Snowflakes
+    function createSnowflakes(){for(let i=0;i<25;i++){
+      let s=document.createElement("div");s.className="snowflake";s.innerHTML="❄";
+      s.style.left=Math.random()*100+"vw";s.style.fontSize=Math.random()*20+10+"px";
+      s.style.animationDuration=(Math.random()*5+5)+"s";document.body.appendChild(s);}}
+    createSnowflakes();
+
+    // Random gradient
+    const gradients=[["#0d47a1","#1976d2","#42a5f5"],["#002f4b","#005c97","#00c6ff"],
+    ["#1a237e","#303f9f","#3f51b5"],["#00416a","#0072ff","#00c6ff"]];
+    let pick=gradients[Math.floor(Math.random()*gradients.length)];
+    document.body.style.background=`linear-gradient(to bottom,${pick[0]},${pick[1]},${pick[2]})`;
+
+    // Typewriter fade-in for safety tips
+    const tips=document.querySelectorAll("main ul li");
+    tips.forEach((tip,i)=>{tip.style.opacity=0;
+      setTimeout(()=>{tip.style.transition="opacity 1s";tip.style.opacity=1;},i*800);});
+  </script>
 </body>
 </html>
