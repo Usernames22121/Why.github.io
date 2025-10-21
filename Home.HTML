@@ -5,22 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Climate Control & Refrigeration</title>
   <style>
-    body {margin:0;padding:0;font-family:Arial,sans-serif;color:#fff;
-      background:linear-gradient(to bottom,#0d47a1,#1976d2,#42a5f5);overflow-x:hidden;}
-    header {background:rgba(0,0,50,0.7);padding:10px 20px;
-      display:flex;align-items:center;justify-content:space-between;}
-    .logo img {height:50px;width:auto;}
-    header h1 {flex:1;text-align:center;font-size:2em;margin:0;}
-    nav a {color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;transition:all 0.3s;}
-    nav a:hover {color:#00eaff;transform:scale(1.1);text-shadow:0 0 8px #00eaff;}
-    main {padding:40px;margin:20px;background:rgba(0,0,0,0.5);border-radius:12px;
-      opacity:0;transform:translateY(20px);transition:opacity 1s ease,transform 1s ease;}
-    main.show {opacity:1;transform:translateY(0);}
-    footer {text-align:center;padding:15px;background:rgba(0,0,50,0.7);}
-    .snowflake {position:fixed;top:-10px;color:white;font-size:1em;
-      animation:fall linear infinite;pointer-events:none;}
-    @keyframes fall {to {transform:translateY(100vh);}}
-    .welcome {font-size:1.2em;margin-top:10px;font-style:italic;}
+    body {
+      margin: 0; padding: 0; font-family: Arial, sans-serif; color: #fff;
+      background: linear-gradient(to bottom, #0d47a1, #1976d2, #42a5f5);
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(0,0,50,0.7); padding: 10px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo img { height: 50px; width: auto; }
+    header h1 { flex: 1; text-align: center; font-size: 2em; margin: 0; }
+    nav a {
+      color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold;
+      transition: all 0.3s;
+    }
+    nav a:hover {
+      color: #00eaff; transform: scale(1.1); text-shadow: 0 0 8px #00eaff;
+    }
+    main {
+      padding: 40px; margin: 20px; background: rgba(0,0,0,0.5);
+      border-radius: 12px;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    main.show { opacity: 1; transform: translateY(0); }
+
+    /* Team Section */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .profile {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .profile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 234, 255, 0.6);
+    }
+    .profile img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .profile h3 {
+      margin-top: 10px;
+      color: #00eaff;
+    }
+    .profile p {
+      font-size: 0.9em;
+      color: #e0e0e0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0,0,50,0.7);
+    }
+    .snowflake {
+      position: fixed; top: -10px; color: white; font-size: 1em;
+      animation: fall linear infinite; pointer-events: none;
+    }
+    @keyframes fall {
+      0% {opacity: 1; transform: translateY(0);}
+      90% {opacity: 1;}
+      100% {opacity: 0; transform: translateY(100vh);}
+    }
+    .welcome {font-size: 1.2em; margin-top: 10px; font-style: italic;}
+    html { scroll-behavior: smooth; }
+    @media (max-width: 600px) {
+      header {flex-direction: column;}
+      header h1 {font-size: 1.5em; margin: 10px 0;}
+      nav a {display: block; margin: 5px 0;}
+    }
   </style>
 </head>
 <body>
@@ -31,7 +95,7 @@
       <a href="Home.HTML">Home</a>
       <a href="Gases.HTML">Safe Gas Use</a>
       <a href="Services.HTML">Our Services</a>
-      <a href="Contacts.HTML">Contact</a>
+      <a href="ContactS.HTML">Contact</a>
     </nav>
   </header>
 
@@ -43,32 +107,72 @@
     friendly cooling systems.</p>
     <p>Explore our website to learn about our services and how we ensure 
     <strong>safe use of refrigerant gases</strong>.</p>
+
+    <!-- Team Section -->
+    <section class="team">
+      <div class="profile">
+        <img src="tech1.jpg" alt="Technician 1">
+        <h3>John Williams</h3>
+        <p>Lead Refrigeration Technician with over 10 years of experience in industrial and commercial cooling systems.</p>
+      </div>
+      <div class="profile">
+        <img src="tech2.jpg" alt="Technician 2">
+        <h3>Sarah Thompson</h3>
+        <p>Specialist in air-conditioning installations and maintenance, ensuring every system runs efficiently and safely.</p>
+      </div>
+      <div class="profile">
+        <img src="tech3.jpg" alt="Technician 3">
+        <h3>Michael Lee</h3>
+        <p>Expert in eco-friendly refrigerant solutions and energy-efficient climate systems for modern businesses.</p>
+      </div>
+      <div class="profile">
+        <img src="tech4.jpg" alt="Technician 4">
+        <h3>Emma Davis</h3>
+        <p>Customer support and service coordinator — keeping projects organized and clients satisfied year-round.</p>
+      </div>
+    </section>
   </main>
 
   <footer><p>&copy; 2025 Climate Control & Refrigeration.</p></footer>
 
   <script>
     // Snowflakes
-    function createSnowflakes(){for(let i=0;i<25;i++){
-      let s=document.createElement("div");s.className="snowflake";s.innerHTML="❄";
-      s.style.left=Math.random()*100+"vw";s.style.fontSize=Math.random()*20+10+"px";
-      s.style.animationDuration=(Math.random()*5+5)+"s";document.body.appendChild(s);}}
+    function createSnowflakes() {
+      for (let i = 0; i < 25; i++) {
+        let s = document.createElement("div");
+        s.className = "snowflake";
+        s.innerHTML = "❄";
+        s.style.left = Math.random() * 100 + "vw";
+        s.style.fontSize = Math.random() * 20 + 10 + "px";
+        s.style.animationDuration = (Math.random() * 5 + 5) + "s";
+        document.body.appendChild(s);
+      }
+    }
     createSnowflakes();
 
     // Welcome Message
-    const hour=new Date().getHours();const welcome=document.getElementById("welcome-message");
-    if(welcome){if(hour<12)welcome.textContent="Good morning! Stay cool with our aircon solutions.";
-    else if(hour<18)welcome.textContent="Good afternoon! We keep businesses running smoothly.";
-    else welcome.textContent="Good evening! Reliable climate comfort anytime.";}
+    const hour = new Date().getHours();
+    const welcome = document.getElementById("welcome-message");
+    if (welcome) {
+      if (hour < 12) welcome.textContent = "Good morning! Stay cool with our aircon solutions.";
+      else if (hour < 18) welcome.textContent = "Good afternoon! We keep businesses running smoothly.";
+      else welcome.textContent = "Good evening! Reliable climate comfort anytime.";
+    }
 
     // Fade-in content
-    window.addEventListener("load",()=>{document.getElementById("content").classList.add("show");});
+    window.addEventListener("load", () => {
+      document.getElementById("content").classList.add("show");
+    });
 
     // Random gradient
-    const gradients=[["#0d47a1","#1976d2","#42a5f5"],["#002f4b","#005c97","#00c6ff"],
-    ["#1a237e","#303f9f","#3f51b5"],["#00416a","#0072ff","#00c6ff"]];
-    let pick=gradients[Math.floor(Math.random()*gradients.length)];
-    document.body.style.background=`linear-gradient(to bottom,${pick[0]},${pick[1]},${pick[2]})`;
+    const gradients = [
+      ["#0d47a1", "#1976d2", "#42a5f5"],
+      ["#002f4b", "#005c97", "#00c6ff"],
+      ["#1a237e", "#303f9f", "#3f51b5"],
+      ["#00416a", "#0072ff", "#00c6ff"]
+    ];
+    let pick = gradients[Math.floor(Math.random() * gradients.length)];
+    document.body.style.background = `linear-gradient(to bottom, ${pick[0]}, ${pick[1]}, ${pick[2]})`;
   </script>
 </body>
 </html>
